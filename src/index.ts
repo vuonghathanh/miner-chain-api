@@ -1,10 +1,9 @@
-import axiosClient from "./config/axiosClient";
+import axiosClient from "../config/axiosClient";
+
 
 const checkHealth = async () => {
     const url = ''
     return await axiosClient.get(url)
 }
 
-export {
-    checkHealth
-}
+export default checkHealth;
