@@ -5,6 +5,6 @@ const checkHealth = async () => {
     return await axiosClient.get(url)
 }
 
-export default {
+export {
     checkHealth
 }
