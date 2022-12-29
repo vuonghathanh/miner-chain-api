@@ -2,7 +2,7 @@ const axios = require('axios');
 const queryString = require('query-string');
 
 
-const API_URL = 'https://mainnet-api.fireal.io/';
+const API_URL = 'http://13.214.179.118:3001/';
 
 const axiosClient = axios.create({
     baseURL: API_URL,
@@ -23,15 +23,15 @@ axiosClient.interceptors.response.use(
         }
         return response;
     }, error => {
-        return  error.response.data;
+        return error.response.data;
     }
 );
 
 
 class MinerApi {
-    async checkHealth () {
-        const url = ''
-        return await axiosClient.get(url)
+    async work(data) {
+        const url = 'work'
+        return await axiosClient.post(url, data)
     }
 }
 
