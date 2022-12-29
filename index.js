@@ -1,5 +1,5 @@
-import axios from "axios";
-import * as queryString from 'query-string';
+const axios = require('axios');
+const queryString = require('query-string');
 
 
 const API_URL = 'https://mainnet-api.fireal.io/';
@@ -27,4 +27,12 @@ axiosClient.interceptors.response.use(
     }
 );
 
-export default axiosClient;
+
+class MinerApi {
+    async checkHealth () {
+        const url = ''
+        return await axiosClient.get(url)
+    }
+}
+
+exports = module.exports = new MinerApi()
